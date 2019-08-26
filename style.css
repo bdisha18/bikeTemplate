@@ -1,0 +1,386 @@
+body{
+  
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 2%;
+    background: white;
+    border: 3px solid #DCDCDC ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.rating{
+	position: absolute;
+	top: 11%;
+	left: 40%;
+	transform: translate(-50%,-50%) rotateY(180deg);
+	display: flex;
+  box-sizing: border-box;
+}
+
+.rating input{
+	display: none;
+}
+
+
+.rating label{
+	display: block;
+	cursor: pointer;
+	width: 40%;
+
+}
+
+.rating label:before{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: relative;
+	display: block;
+	font-size: 30px;
+	color: #FFDAB9;
+}
+
+.rating label:after{
+	content: '\f005';
+	font-family: fontAwesome;
+	position: absolute;
+	display: block;
+	font-size: 30px;
+	color: #FFA500;
+	top: 0;
+	opacity: 0;
+	transition: .5s;			
+	text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,      
+.rating input:checked ~ label:after{
+	opacity: 1;
+}
+
+
+ul{
+	list-style-type: none;
+	padding: 0;
+	overflow: hidden;
+	background-color: white;
+	border-bottom: 2px solid #DCDCDC;
+
+}
+
+li{
+	float: left;
+	font-size: 20px;
+}
+
+
+
+li a{
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 0px 20px;
+	text-decoration: none;
+}
+
+li a:hover
+{
+	background-color: gray;
+	opacity: 0.8;
+}
+
+
+.active{
+	background-color: white;
+	border-bottom: 5px solid red;
+
+
+}
+
+.button1{
+	border: 1px solid gray;
+	width: 6%;
+	padding: 7px 7px 7px;
+	text-align: center;
+	margin-left: 15%; 
+}
+
+
+.button2{
+	border: 1px solid gray;
+	width: 6%;
+	padding: 7px 7px 7px;
+	text-align: center;
+}
+
+.button1:hover, .button2:hover
+{
+	background-color: gray;
+	opacity: 0.8;
+}
+
+
+
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: absolute;
+  width: 50%;
+  padding-top: 2%;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+ max-width: 100%;
+  padding: 16px;
+  margin-top: -50px;
+  color: gray;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: #DCDCDC;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column{
+  float: left;
+  border: 2px solid #DCDCDC;
+  margin-left: 4px;
+  width: 14%;
+}
+
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+.key1{
+  margin-left: 38%;
+  display: block;
+}
+
+/* label styling */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+h3 {
+  font-family:"Montserrat"; 
+  font-size:25px; 
+  margin-left: 54%;
+  color: black;
+
+}
+.prog {
+  width:25%; 
+  margin-left: 54%;
+}
+.progress {
+  width:100%; 
+  height:6%; 
+  background:#F0E68C; 
+  margin:10px;
+  border-radius: 20px;
+}
+.progress-bar {
+  height:20px;
+  border-radius: 20px; 
+  background: #FFD700;
+  width:1%;
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  transition: width 1s ease;
+}
+.valor-nivel {
+  line-height:20px; 
+  color: black; 
+  margin-left:10px; 
+  font-family:"Montserrat"; 
+  font-size:12px;
+}
+
+
+/* half-circle progress bar*/
+
+.progress1{
+  position: relative;
+  margin-right: 30px;
+  margin-top: 100px;
+  float: right;
+  text-align: center;
+}
+.barOverflow{ 
+  position: relative;
+  overflow: hidden; 
+  width: 100%; height: 45px; 
+  margin-bottom: -14px; 
+}
+.bar{
+  position: relative;
+ padding-top: 50px;
+  width: 90px; height: 90px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  border: 8px solid #F0E68C;     
+  border-bottom-color:#FFD700;  
+  border-right-color: #FFD700;
+}
+
+@media(max-width: 768px){
+  header{
+    float: none;
+    width: 100%;
+    text-align: center;
+    font-size: 80%;
+  }
+
+  .rating{
+    float: none;
+    padding-right: 30%;
+    padding-top: 3%;
+  }
+
+  nav{
+    
+    padding-top: 5%;
+    width: 100%;
+    
+  }
+
+  .button1{
+    
+    width: 100%;
+    margin-left: 40%;
+    margin-bottom: 2%;
+  }
+
+  body{
+    border-right:3px solid #DCDCDC;
+    width: auto;
+    margin-left:1%;
+    margin-right: 4.5%;
+
+
+  }
+
+  .key1{
+   margin-left: 4%;
+    padding-top:5%;
+    float: none;
+  }
+
+  .progress1{
+    margin-right: 2%;
+  }
+
+.controller{
+  margin-left: 60%;
+}
+
+}
+
+
+
+@media(max-width: 624px){
+
+  .key1{
+    font-size: 57%;
+    float: none;
+ }
+
+ body{
+  width: auto;
+    margin-right: 12%;
+
+ }
+
+ .button1{
+
+    width: 100%;
+    margin-left: 30%;
+
+ }
+
+ .container{
+  width: 85%;
+
+  
+ }
+
+ h3{
+  margin-top: 81%;
+  float: none;
+   width: 100%;
+  margin-left: 10%;
+ }
+
+  .prog{
+  float: none;
+  margin-top: 2%;
+  width: 50%;
+  margin-left: 10%;
+
+ }
+
+ 
+ .controller{
+  margin-left: 30%;
+ }
+
+ .row{
+  margin-left: 5%;
+ }
+}
+
+
+
+
+
+
+
+
+
